@@ -449,14 +449,16 @@ def _(api_price, hw_cost, lifetime_days, mo, tokens_day):
     if saving_day <= 0:
         verdict = (
             f"At {tokens_day.value}M tokens/day the API costs "
-            f"**${api_day:,.2f}/day** and local costs **${local_day:,.2f}/day**. "
+            f"**{api_day:,.2f} USD/day** and local costs "
+            f"**{local_day:,.2f} USD/day**. "
             "Hosted wins: you would need more volume, or a reason other than cost."
         )
     else:
         break_even = hw_cost.value / saving_day
         verdict = (
-            f"API: **${api_day:,.2f}/day**. Local: **${local_day:,.2f}/day** "
-            f"(hardware ${hardware_day:,.2f} + power ${electricity_day:,.2f}). "
+            f"API: **{api_day:,.2f} USD/day**. "
+            f"Local: **{local_day:,.2f} USD/day** "
+            f"(hardware {hardware_day:,.2f} + power {electricity_day:,.2f}). "
             f"Hardware pays back in about **{break_even:.0f} days**, or "
             f"{break_even / 365:.1f} years."
         )
