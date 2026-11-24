@@ -14,7 +14,7 @@ This repository holds the lecture notebooks. They are written as
 [Marimo](https://marimo.io) notebooks: the same file is the source, the live
 notebook, the slide deck, and the browser-runnable WebAssembly app.
 
-> **Status:** draft. The first two lectures are published here; the rest of the
+> **Status:** draft. The first two lectures are drafted here; the rest of the
 > syllabus is being written as the course runs. See [Roadmap](#-roadmap).
 
 ## 📑 Content
@@ -28,6 +28,7 @@ notebook, the slide deck, and the browser-runnable WebAssembly app.
    - Course stack, semester project, first look at prompt injection
 
    [![Slides](https://img.shields.io/badge/-Slides-blue?logo=marimo&style=flat&labelColor=gray)](notebooks/00/intro/index.html)
+   · [source](notebooks/00/intro.py)
 
 ### Module 2 — Running models
 
@@ -38,6 +39,7 @@ notebook, the slide deck, and the browser-runnable WebAssembly app.
    - Local versus hosted: cost, capability, privacy
 
    [![Slides](https://img.shields.io/badge/-Slides-blue?logo=marimo&style=flat&labelColor=gray)](notebooks/01/local_llms/index.html)
+   · [source](notebooks/01/local_llms.py)
 
 The slide links are relative to the published site (see
 [Building the decks](#-building-the-decks)); on GitHub they point at paths that

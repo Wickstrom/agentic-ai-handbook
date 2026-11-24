@@ -70,7 +70,7 @@ def _(mo):
 
     | Concern | Hosted API | Local model |
     |---|---|---|
-    | Capability | Frontier models | One to two generations behind |
+    | Capability | Frontier models | Usually one generation behind, sometimes close |
     | Privacy | Prompts leave the machine | Data stays local |
     | Marginal cost | Per token, forever | Electricity + hardware |
     | Latency | Network + queue | No network, but slower decode |
@@ -288,7 +288,7 @@ def _(mo):
 
     | Hardware | Memory | Bandwidth | 8B Q4 (~5 GB), ideal |
     |---|---|---|---|
-    | M-series laptop | Unified, 16–128 GB | 100–540 GB/s | 20–100 tok/s |
+    | M-series laptop | Unified, 16–128 GB | 70–540 GB/s | ~15–110 tok/s |
     | RTX 4090 | 24 GB GDDR6X | ~1000 GB/s | ~190 tok/s |
     | A100 80 GB | 80 GB HBM2e | ~2000 GB/s | ~390 tok/s |
     | H100 80 GB | 80 GB HBM3 | ~3350 GB/s | ~650 tok/s |
