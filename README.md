@@ -12,7 +12,9 @@ implications.
 
 This repository holds the lecture notebooks. They are written as
 [Marimo](https://marimo.io) notebooks: the same file is the source, the live
-notebook, the slide deck, and the browser-runnable WebAssembly app.
+notebook, the slide deck, and the browser-runnable WebAssembly app. The decks
+are published at
+**[wickstrom.github.io/agentic-ai-handbook](https://wickstrom.github.io/agentic-ai-handbook/)**.
 
 > **Status:** draft. The first two lectures are drafted here; the rest of the
 > syllabus is being written as the course runs. See [Roadmap](#-roadmap).
@@ -27,7 +29,7 @@ notebook, the slide deck, and the browser-runnable WebAssembly app.
    - The agent loop, and a minimal end-to-end agent
    - Course stack, semester project, first look at prompt injection
 
-   [![Slides](https://img.shields.io/badge/-Slides-blue?logo=marimo&style=flat&labelColor=gray)](notebooks/00/intro/index.html)
+   [![Slides](https://img.shields.io/badge/-Slides-blue?logo=marimo&style=flat&labelColor=gray)](https://wickstrom.github.io/agentic-ai-handbook/notebooks/00/intro/)
    · [source](notebooks/00/intro.py)
 
 ### Module 2 — Running models
@@ -38,12 +40,11 @@ notebook, the slide deck, and the browser-runnable WebAssembly app.
    - Memory bandwidth, tokens per second, batching, and latency
    - Local versus hosted: cost, capability, privacy
 
-   [![Slides](https://img.shields.io/badge/-Slides-blue?logo=marimo&style=flat&labelColor=gray)](notebooks/01/local_llms/index.html)
+   [![Slides](https://img.shields.io/badge/-Slides-blue?logo=marimo&style=flat&labelColor=gray)](https://wickstrom.github.io/agentic-ai-handbook/notebooks/01/local_llms/)
    · [source](notebooks/01/local_llms.py)
 
-The slide links are relative to the published site (see
-[Building the decks](#-building-the-decks)); on GitHub they point at paths that
-only exist after a build.
+The slide links above are the live pages; they run entirely in the browser via
+WebAssembly. The source for each deck is the matching `.py` file.
 
 ## 🗂 Repository layout
 
