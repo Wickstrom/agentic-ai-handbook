@@ -1,0 +1,44 @@
+# Build output
+_build/*
+_slides/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Testing / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Marimo editor cache (one directory per notebook when running `marimo edit`)
+__marimo__/
+
+# Notebooks
+.ipynb_checkpoints
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Local secrets and scratch files
+*.key
+scratch/

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agentic AI — Lecture Slides</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/simple.css" id="theme" />
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .reveal-viewport { background: #fff; }
+    .wrap { max-width: 900px; margin: 60px auto; padding: 0 32px; }
+    h1 { font-size: 2.4rem; margin-bottom: 0.4rem; color: #1a1a1a; }
+    .lede { font-size: 1.1rem; color: #555; margin-top: 0; }
+    h2 { font-size: 1.3rem; margin-top: 2.4rem; color: #1a1a1a;
+         border-bottom: 2px solid #eee; padding-bottom: 0.4rem; }
+    ul.lectures { list-style: none; padding: 0; margin: 0; }
+    ul.lectures li { padding: 0.5rem 0; border-bottom: 1px solid #f0f0f0; }
+    ul.lectures li:last-child { border-bottom: none; }
+    ul.lectures a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    ul.lectures a:hover { text-decoration: underline; }
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      margin: 24px 0;
+      font-size: 0.95rem;
+    }
+    kbd {
+      background: #f3f4f6;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: monospace;
+      font-size: 0.85em;
+    }
+    table.keys { border-collapse: collapse; margin-top: 8px; font-size: 0.92rem; }
+    table.keys td { padding: 4px 16px 4px 0; }
+    .badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+    .badge.dev {
+      background: #fffbeb;
+      color: #b45309;
+      border-color: #fcd34d;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal-viewport">
+    <div class="wrap">
+      <h1>Agentic AI — Lecture Slides</h1>
+      <p class="lede">FYS 3810 / FYS 8810, UiT The Arctic University of Norway — UiT Machine Learning Group</p>
+
+      <div class="note">
+        All decks are Marimo notebooks exported with
+        <code>marimo export html-wasm</code> and run entirely in your browser
+        via WebAssembly — the Python interpreter, dependencies, and code all
+        live inside the page. Give them a few seconds to spin up on first
+        load. Use <kbd>←</kbd> / <kbd>→</kbd> for navigation.
+      </div>
+
+      <h2>Module 1 — Foundations</h2>
+      <ul class="lectures">
+        <li><a href="notebooks/00/intro/index.html">Introduction to agentic AI <span class="badge">marimo</span></a></li>
+      </ul>
+
+      <h2>Module 2 — Running models</h2>
+      <ul class="lectures">
+        <li><a href="notebooks/01/local_llms/index.html">Local LLMs and compute <span class="badge">marimo</span></a></li>
+      </ul>
+
+      <h2>Coming later</h2>
+      <ul class="lectures">
+        <li>Prompting and context engineering <span class="badge dev">in progress</span></li>
+        <li>Agent harnesses, tool use, and agent loops <span class="badge dev">in progress</span></li>
+        <li>Evaluating agents <span class="badge dev">in progress</span></li>
+        <li>Skills and the Model Context Protocol (MCP) <span class="badge dev">in progress</span></li>
+      </ul>
+
+      <h2>Keyboard shortcuts (inside a deck)</h2>
+      <table class="keys">
+        <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>previous / next slide</td></tr>
+        <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>previous / next sub-slide</td></tr>
+        <tr><td><kbd>Space</kbd></td><td>advance</td></tr>
+        <tr><td><kbd>f</kbd></td><td>fullscreen</td></tr>
+        <tr><td><kbd>?</kbd></td><td>help overlay</td></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

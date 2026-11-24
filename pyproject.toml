@@ -1,0 +1,15 @@
+[project]
+name = "agentic-ai-handbook"
+version = "0.1.0"
+description = "Lecture notebooks for FYS 3810 / FYS 8810 Special Curriculum in Agentic AI (UiT)"
+requires-python = ">=3.10"
+dependencies = [
+    "marimo>=0.23",
+    "openai",
+]
+
+[tool.uv]
+# Each lecture under notebooks/ carries PEP 723 inline script metadata, so
+# `uv run marimo edit notebooks/00/intro.py` resolves its own dependencies.
+# The list above covers the shared environment used for local work and for
+# `scripts/build_slides.sh`.
