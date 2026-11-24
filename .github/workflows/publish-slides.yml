@@ -1,12 +1,12 @@
 name: Publish slides
 
-# Rebuild and deploy the Marimo WASM decks.
+# Rebuild and deploy the Marimo WASM decks on every push to main.
 #
-# Manual only. This repository is private, but a Pages site built from it is
-# public unless the organisation's plan allows private Pages. Enable Pages in
-# the repository settings, then run this workflow from the Actions tab.
+# Both the repository and the generated Pages site are public.
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:

@@ -94,16 +94,14 @@ page under `_slides/`, together with the landing page:
 python3 -m http.server -d _slides 8000   # then open http://localhost:8000
 ```
 
-The GitHub Actions workflow runs the same export and deploys `_slides/` to
-GitHub Pages. It is **manual** (`workflow_dispatch`) on purpose: Pages on a
-private repository requires a paid plan, and the generated site is public by
-default. Enable Pages in the repository settings, then run *Publish slides*
-from the Actions tab.
+The GitHub Actions workflow runs the same export on every push to `main` and
+deploys `_slides/` to GitHub Pages.
 
-> **Note on privacy.** This repository is private, but a GitHub Pages site
-> built from it is **public** unless your organisation's plan allows private
-> Pages. If the decks should stay private, do not enable Pages: build locally
-> with the script above, or distribute the generated HTML by other means.
+> **Note on publishing.** Both this repository and the Pages site are public.
+> Never commit API keys or student data: the practical code reads credentials
+> from environment variables. Use the local build
+> (`./scripts/build_slides.sh`) if you want to preview a draft without
+> publishing it.
 
 ## ✍️ Adding a lecture
 
