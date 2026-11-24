@@ -23,27 +23,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v7
+        uses: astral-sh/setup-uv@v10
         with:
           python-version: '3.12'
 
-      # `uv sync` rather than `--frozen`: the repository does not ship a
-      # uv.lock yet. Commit the generated lockfile to pin CI to resolved
-      # versions, then switch this back to `uv sync --frozen`.
+      # The committed uv.lock pins every dependency; --frozen makes CI fail
+      # instead of silently re-resolving when the lockfile is out of date.
       - name: Install Python dependencies
-        run: uv sync
+        run: uv sync --frozen
 
       - name: Export Marimo notebooks to WASM
         run: ./scripts/build_slides.sh
 
       - name: Upload _slides/ artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _slides
 
