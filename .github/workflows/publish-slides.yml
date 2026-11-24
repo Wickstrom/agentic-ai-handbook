@@ -1,14 +1,12 @@
 name: Publish slides
 
-# Rebuild and deploy the Marimo WASM decks on every push to main.
+# Rebuild and deploy the Marimo WASM decks.
 #
-# The repository is private, but a Pages site built from it is public unless
-# the organisation's plan allows private Pages. If the decks must stay private,
-# disable this workflow and build locally with scripts/build_slides.sh instead.
+# Manual only. This repository is private, but a Pages site built from it is
+# public unless the organisation's plan allows private Pages. Enable Pages in
+# the repository settings, then run this workflow from the Actions tab.
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -27,13 +25,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Install uv
         uses: astral-sh/setup-uv@v7
         with:
           python-version: '3.12'
 
+      # `uv sync` rather than `--frozen`: the repository does not ship a
+      # uv.lock yet. Commit the generated lockfile to pin CI to resolved
+      # versions, then switch this back to `uv sync --frozen`.
       - name: Install Python dependencies
-        run: uv sync --frozen
+        run: uv sync
 
       - name: Export Marimo notebooks to WASM
         run: ./scripts/build_slides.sh
